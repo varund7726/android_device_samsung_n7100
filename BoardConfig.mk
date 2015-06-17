@@ -29,7 +29,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/n7100/bluetooth
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/smdk4412
-TARGET_KERNEL_CONFIG := cyanogenmod_n7100_defconfig
+TARGET_KERNEL_CONFIG := custom_n7100_defconfig
 
 # assert
 TARGET_OTA_ASSERT_DEVICE := t03g,n7100,GT-N7100
@@ -43,3 +43,24 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/n7100/include
 # Recovery
 TARGET_RECOVERY_FSTAB := device/samsung/n7100/rootdir/fstab.smdk4x12
 RECOVERY_FSTAB_VERSION := 2
+
+#RR
+TARGET_TC_ROM := 4.9-linaro
+
+TARGET_TC_KERNEL := 4.9-sm
+
+RROPTI := true
+
+RR_O3 := true
+
+RR_STRICT := false
+
+RR_GRAPHITE := true
+
+RR_KRAIT := false
+
+RR_PIPE := true
+
+RR_GCC_VERSION_EXP := $(TARGET_TC_ROM)
+
+RR_KERNEL_CUSTOM_TOOLCHAIN := $(TARGET_TC_KERNEL)
